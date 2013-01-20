@@ -40,8 +40,7 @@ Set your nickname in `~/.emacs.d/modules/irc.el`.
 
 ## Thanks To
 
-While building this configuration, I borrowed some ideas/code from other from
-here:
+While building this configuration, I borrowed some ideas/code from others:
 
 * [Prelude](https://github.com/bbatsov/prelude)
 * [Peleteiro's dotfiles](https://github.com/peleteiro/dotfiles)
