@@ -19,12 +19,10 @@
 ;; available custom themes
 ;;
 ;; solarized:
-;;
 ;; (load-theme 'solarized t)
 ;; (load-theme 'solarized-dark t)
 ;;
 ;; tomorrow: (currently does not support magit diff colors)
-;;
 ;; (load-theme 'tomorrow t)
 ;; (load-theme 'tomorrow-night t)
 ;; (load-theme 'tomorrow-night-bright t)
