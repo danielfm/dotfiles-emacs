@@ -1,6 +1,6 @@
 # My Emacs Configuration
 
-This is a simple (El-Get)[https://github.com/dimitri/el-get]-based
+This is a simple [El-Get](https://github.com/dimitri/el-get)-based
 configuration that automatically loads the packages I need in order to work
 on my professional and personal projects.
 
@@ -21,7 +21,7 @@ This operation might take a few minutes to complete. Be patient!
 ### Configure Slime With Your Lisp Implementation
 
 The quickest way to add Slime support to your Lisp implementation is ia
-(Quicklisp)[http://www.quicklisp.org/beta/]. (No pun intended!)
+[Quicklisp](http://www.quicklisp.org/beta/). (No pun intended!)
 
 After following the Quicklisp installation instructions, run the command
 bellow in your Lisp implementation REPL in order to install Slime:
@@ -43,8 +43,8 @@ Set your nickname in `~/.emacs.d/modules/irc.el`.
 While building this configuration, I borrowed some ideas/code from other from
 here:
 
-* (Prelude)[https://github.com/bbatsov/prelude]
-* (Peleteiro's dotfiles)[https://github.com/peleteiro/dotfiles]
+* [Prelude](https://github.com/bbatsov/prelude)
+* [Peleteiro's dotfiles](https://github.com/peleteiro/dotfiles)
 
 ## License
 
