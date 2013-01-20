@@ -20,7 +20,7 @@ This operation might take a few minutes to complete. Be patient!
 
 ### Configure Slime With Your Lisp Implementation
 
-The quickest way to add Slime support to your Lisp implementation is ia
+The quickest way to add Slime support to your Lisp implementation is via
 [Quicklisp](http://www.quicklisp.org/beta/). (No pun intended!)
 
 After following the Quicklisp installation instructions, run the command
