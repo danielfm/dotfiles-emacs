@@ -14,10 +14,8 @@
 	     '(:name rvm))
 
 (add-to-list 'el-get-sources
-	     '(:name sass-mode))
-
-(add-to-list 'el-get-sources
-	     '(:name scss-mode))
+	     '(:name scss-mode
+		     :after (setq scss-compile-at-save nil)))
 
 (add-to-list 'el-get-sources
 	     '(:name yaml-mode))
