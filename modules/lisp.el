@@ -15,9 +15,9 @@
 (add-to-list 'el-get-sources
 	     '(:name slime
 		     :after (progn
-			      ;; If you installed Slime to your Lisp
-			      ;; implementation via Quicklisp:
-			      ;;
-			      ;; (load "~/quicklisp/slime-helper.el")
-			      ;; (setq inferior-lisp-program "sbcl")
-			      )))
+			      (let ((slime-helper-file (getenv "SLIME_HELPER_FILE"))
+				    (lisp-program (getenv "LISP_PROGRAM")))
+				(when slime-helper-file
+				  (load slime-helper-file))
+				(when lisp-program
+				  (setq inferior-lisp-program lisp-program))))))
