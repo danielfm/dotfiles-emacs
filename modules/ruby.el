@@ -21,6 +21,12 @@
 	     '(:name yaml-mode))
 
 (add-to-list 'el-get-sources
+	     '(:name ruby-compilation))
+
+(add-to-list 'el-get-sources
+	     '(:name inf-ruby))
+
+(add-to-list 'el-get-sources
 	     '(:name ruby-mode
 		     :after (mapc (lambda (file)
 				    (add-to-list 'auto-mode-alist (cons file 'ruby-mode)))
