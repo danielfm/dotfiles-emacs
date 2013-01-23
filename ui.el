@@ -14,7 +14,7 @@
 (set-fringe-style -1)
 
 ;; my custom theme of choice
-(load-theme 'zenburn t)
+(load-theme 'tomorrow-night t)
 
 ;; available custom themes
 ;;

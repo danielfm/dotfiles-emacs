@@ -1,10 +1,14 @@
 (add-to-list 'el-get-sources
-	     '(:name tomorrow-theme
-		     :after (add-to-list 'custom-theme-load-path
-					 (expand-file-name "GNU Emacs"))))
+	     '(:name solarized-theme))
 
 (add-to-list 'el-get-sources
-	     '(:name solarized-theme))
+	     '(:name tomorrow-theme
+		     :type github
+		     :description "Tomorrow theme with diff and magit support"
+		     :pkgname "danielfm/tomorrow-theme"
+		     :url "https://github.com/danielfm/tomorrow-theme"
+		     :after (add-to-list 'custom-theme-load-path
+					 (expand-file-name "GNU Emacs"))))
 
 (add-to-list 'el-get-sources
 	     '(:name zenburn-theme
