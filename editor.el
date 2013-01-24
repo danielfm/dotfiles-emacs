@@ -4,6 +4,9 @@
 ;; highlight matching parens
 (show-paren-mode t)
 
+;; highlight current line
+(add-hook 'after-change-major-mode-hook 'hl-line-mode)
+
 ;; enable interactive do
 (ido-mode t)
 
