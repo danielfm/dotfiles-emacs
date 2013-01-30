@@ -13,6 +13,9 @@
 (scroll-bar-mode -1)
 (set-fringe-style -1)
 
+;; disable alarm bell beep
+(setq visible-bell t)
+
 ;; my custom theme of choice
 (load-theme 'tomorrow-night t)
 
