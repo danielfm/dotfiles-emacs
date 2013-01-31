@@ -9,7 +9,7 @@
 
 ;; TODO: Update code to support other unix variants as well
 
-;; Loads the shell environment variables when launching Emacs outside shell
+;; loads the shell environment variables when launching Emacs outside shell
 (when window-system
   (when (eql system-type 'darwin)
     (load-unix-shell-env)))
