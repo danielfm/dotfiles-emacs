@@ -11,5 +11,5 @@
 
 ;; Loads the shell environment variables when launching Emacs outside shell
 (when window-system
-  (when (= system-type 'darwin)
+  (when (eql system-type 'darwin)
     (load-unix-shell-env)))
