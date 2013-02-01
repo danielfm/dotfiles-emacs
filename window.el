@@ -8,5 +8,6 @@
 (global-set-key (kbd "M-S-<left>")  'shrink-window-horizontally)
 
 ;; loads the shell environment variables when launching Emacs outside shell
-(when (in-list-p system-type '(darwin gnu/linux))
+(when (and window-system
+	   (in-list-p system-type '(darwin gnu/linux)))
   (load-unix-shell-env))
