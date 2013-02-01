@@ -6,11 +6,10 @@
 
 (defun in-list-p (elem list)
   "Returns t whether elem is present in list. Returns nil otherwise."
-  (if list
-      (if (eq elem (car list))
-	  t
-	(in-list-p elem (cdr list)))
-    nil))
+  (when list
+    (if (eq elem (car list))
+	t
+      (in-list-p elem (cdr list)))))
 
 (defun load-unix-shell-env ()
   "Adds the shell environment variables to Emacs' process environment."
