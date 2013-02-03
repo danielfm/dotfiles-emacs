@@ -4,12 +4,13 @@
 	  (add-hook hook callback))
 	hooks))
 
-(defun in-list-p (elem list)
+(defun in-list-p (elem list &optional comp-fn)
   "Returns t whether elem is present in list. Returns nil otherwise."
-  (when list
-    (if (eq elem (car list))
-	t
-      (in-list-p elem (cdr list)))))
+  (let ((comp (if comp-fn comp-fn 'eq)))
+    (when list
+      (if (apply comp (list elem (car list)))
+	  t
+	(in-list-p elem (cdr list) comp)))))
 
 (defun load-unix-shell-env ()
   "Adds the shell environment variables to Emacs' process environment."
