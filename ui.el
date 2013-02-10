@@ -7,11 +7,13 @@
 (size-indication-mode t)
 
 ;; remove clutter from the UI
-(blink-cursor-mode t)
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (scroll-bar-mode -1)
 (set-fringe-style -1)
+
+;; blinking cursor
+(blink-cursor-mode t)
 
 ;; disable alarm bell beep
 (setq visible-bell t)
@@ -25,7 +27,7 @@
 ;; (load-theme 'solarized t)
 ;; (load-theme 'solarized-dark t)
 ;;
-;; tomorrow: (currently does not support magit diff colors)
+;; tomorrow:
 ;; (load-theme 'tomorrow t)
 ;; (load-theme 'tomorrow-night t)
 ;; (load-theme 'tomorrow-night-bright t)
