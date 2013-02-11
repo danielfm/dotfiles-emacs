@@ -8,7 +8,9 @@ on my professional and personal projects.
 ## Compatibility
 
 This configuration was built for Emacs 24.x and it should work on both
-GUI-based and terminal-based versions of Emacs (for Linux and MacOS X).
+GUI-based and terminal-based versions of Emacs for Linux and MacOS X.
+
+Windows aren't and won't be supported.
 
 
 ## Installation
@@ -65,6 +67,23 @@ export IRCNICK=danielfm
 
 Read the [ERC manual](http://www.gnu.org/software/emacs/manual/html_mono/erc.html)
 for more information.
+
+
+### Emacs And Environment Variables
+
+If you are having trouble to make Emacs find your environment variables, please
+make sure they are being defined in `~/.bashrc`. If your variables are being
+defined in `~/.bash_profile` (which is very common practice among Mac users),
+please move them to `~/.bashrc` and source it from within `~/.bash_profile`:
+
+````bash
+# In ~/.bashrc
+export VARIABLE=value
+export ...
+
+# In ~/.bash_profile
+source ~/.bashrc
+````
 
 
 ## Thanks To
