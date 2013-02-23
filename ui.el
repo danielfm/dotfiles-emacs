@@ -18,6 +18,10 @@
 ;; disable alarm bell beep
 (setq visible-bell t)
 
+;; use Monaco font in Mac OS X
+(when (eq system-type 'darwin)
+  (set-default-font "Monaco"))
+
 ;; my custom theme of choice
 (load-theme 'tomorrow-night t)
 
