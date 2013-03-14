@@ -3,6 +3,10 @@
 
 (add-to-list 'el-get-sources
 	     '(:name tomorrow-theme
+		     :type github
+		     :pkgname "danielfm/tomorrow-theme"
+		     :description "A Tomorrow Theme fork that works"
+		     :url "https://github.com/danielfm/tomorrow-theme"
 		     :after (add-to-list 'custom-theme-load-path
 					 (expand-file-name "GNU Emacs"))))
 
