@@ -1,3 +1,6 @@
+;; set your desired tab width
+(setq-default indent-tabs-mode nil)
+
 ;; enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
 
