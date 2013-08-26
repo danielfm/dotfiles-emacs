@@ -9,3 +9,5 @@
 (load "editor")
 (load "ui")
 (load "window")
+
+(server-start)
