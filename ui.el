@@ -23,7 +23,7 @@
   (set-default-font "Monaco"))
 
 ;; my custom theme of choice
-(load-theme 'tomorrow-night t)
+(load-theme 'tomorrow-night-bright t)
 
 ;; available custom themes
 ;;
