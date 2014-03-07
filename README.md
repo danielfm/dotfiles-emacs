@@ -85,17 +85,21 @@ export ...
 source ~/.bashrc
 ````
 
-## Custom Keybindings
+## Custom Keybinding
 
-TODO: Finish the job of documenting them all.
+### Magit
+
+````
+C-x g    magit-status
+````
 
 ### Multiple Cursors
 
 ````
-C-c * mc/edit-lines
-C-c . mc/mark-all-like-this
-C-c > mc/mark-next-like-this
-C-c < mc/mark-previous-like-this
+C-c *    mc/edit-lines
+C-c .    mc/mark-all-like-this
+C-c >    mc/mark-next-like-this
+C-c <    mc/mark-previous-like-this
 ````
 
 
