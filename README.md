@@ -87,12 +87,6 @@ source ~/.bashrc
 
 ## Custom Keybinding
 
-### Magit
-
-````
-C-x g    magit-status
-````
-
 ### Multiple Cursors
 
 ````
