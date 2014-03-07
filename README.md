@@ -85,6 +85,19 @@ export ...
 source ~/.bashrc
 ````
 
+## Custom Keybindings
+
+TODO: Finish the job of documenting them all.
+
+### Multiple Cursors
+
+````
+C-c * mc/edit-lines
+C-c . mc/mark-all-like-this
+C-c > mc/mark-next-like-this
+C-c < mc/mark-previous-like-this
+````
+
 
 ## Thanks To
 
