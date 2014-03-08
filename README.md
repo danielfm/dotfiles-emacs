@@ -32,30 +32,6 @@ for more information.
 
 ## How To
 
-### Configure Slime With Your Lisp Implementation
-
-The quickest way to add Slime support to your Lisp implementation is via
-[Quicklisp](http://www.quicklisp.org/beta/). (No pun intended!)
-
-After following the Quicklisp installation instructions, run the command
-bellow in your Lisp implementation REPL in order to install Slime:
-
-````common-lisp
-
-(ql:quickload "quicklisp-slime-helper")
-````
-
-Then, specify the following environment variables pointing to
-`slime-helper.el` file and the executable of your preferred Lisp
-implementation:
-
-````bash
-
-export SLIME_HELPER_FILE=~/quicklisp/slime-helper.el
-export LISP_PROGRAM=sbcl
-````
-
-
 ### Change The Nickname Used By Erc
 
 Specify the `IRCNICK` environment variable as follows:
