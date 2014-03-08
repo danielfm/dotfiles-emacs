@@ -87,6 +87,16 @@ source ~/.bashrc
 
 ## Custom Keybinding
 
+### WindMove
+
+````
+C-c <up>     windmove-up
+C-c <down>   windmove-down
+C-c <left>   windmove-left
+C-c <right>  windmove-right
+````
+
+
 ### Multiple Cursors
 
 ````
