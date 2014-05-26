@@ -1,2 +1,3 @@
 (add-to-list 'el-get-sources
-	     '(:name magit))
+	     '(:name magit
+		     :after (global-set-key (kbd "C-x g") 'magit-status)))
