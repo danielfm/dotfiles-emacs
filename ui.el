@@ -22,8 +22,8 @@
 (when (eq system-type 'darwin)
   (set-default-font "Monaco"))
 
-;; my custom theme of choice
-(load-theme 'tomorrow-night-bright t)
+;; my theme of choice
+(load-theme 'zenburn t)
 
 ;; available custom themes
 ;;
