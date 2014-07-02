@@ -6,3 +6,7 @@
 
 (add-to-list 'el-get-sources
 	     '(:name flymake-ruby))
+
+;; displays the flymake errors on cursor, useful within the terminal
+(add-to-list 'el-get-sources
+	     '(:name flymake-cursor))
