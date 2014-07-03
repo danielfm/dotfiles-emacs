@@ -7,6 +7,7 @@
 (size-indication-mode t)
 
 ;; remove clutter from the UI
+(menu-bar-mode -1)
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (scroll-bar-mode -1)
