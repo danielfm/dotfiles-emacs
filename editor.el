@@ -10,6 +10,10 @@
 ;; highlight current line
 (add-hook 'after-change-major-mode-hook 'hl-line-mode)
 
+;; show line numbers in programming modes
+;; (add-hook 'prog-mode-hook 'linum-mode)
+;; (setq linum-format "%4d  ")
+
 ;; enable interactive do
 (ido-mode t)
 
