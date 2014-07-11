@@ -9,4 +9,4 @@
 
 ;; Custom TODO workflow
 (setq org-todo-keywords
-      '((sequence "TODO" "WIP" "|" "DONE" "DELEGATED")))
+      '((sequence "TODO" "WIP" "|" "DONE" "DELEGATED" "PRODUCTION")))
