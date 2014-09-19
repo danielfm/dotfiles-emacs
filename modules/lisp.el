@@ -2,7 +2,12 @@
 			lisp-mode-hook
 			lisp-interaction-mode-hook
 			scheme-mode-hook
-			clojure-mode-hook))
+			clojure-mode-hook
+                        geiser-repl-mode-hook))
+
+(add-to-list 'el-get-sources
+	     '(:name pretty-lambdada
+		     :after (add-hook-list 'pretty-lambda-mode lisp-mode-hooks)))
 
 (add-to-list 'el-get-sources
 	     '(:name paredit
@@ -11,3 +16,6 @@
 (add-to-list 'el-get-sources
 	     '(:name rainbow-delimiters
 		     :after (add-hook-list 'rainbow-delimiters-mode lisp-mode-hooks)))
+
+(add-to-list 'el-get-sources
+	     '(:name geiser))
