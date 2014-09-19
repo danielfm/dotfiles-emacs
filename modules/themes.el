@@ -1,7 +1,4 @@
 (add-to-list 'el-get-sources
-	     '(:name solarized-theme))
-
-(add-to-list 'el-get-sources
 	     '(:name tomorrow-theme
 		     :type github
 		     :pkgname "danielfm/tomorrow-theme"
