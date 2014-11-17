@@ -1,5 +1,5 @@
 ;; load el-get
-(add-to-list 'load-path (expand-file-name "el-get/el-get" emacs-root-dir))
+(add-to-list 'load-path (expand-file-name "el-get/el-get" default-directory))
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -10,7 +10,7 @@
       (eval-print-last-sexp))))
 
 ;; load all .el files inside `modules-dir`
-(setq modules-dir (expand-file-name "modules" emacs-root-dir))
+(setq modules-dir (expand-file-name "modules" default-directory))
 (mapc 'load (directory-files modules-dir 't "^[^#].*el$"))
 
 ;; install all missing packages via el-get

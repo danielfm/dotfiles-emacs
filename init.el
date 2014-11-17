@@ -1,7 +1,7 @@
-(setq emacs-root-dir (expand-file-name "~/.emacs.d"))
-
 (push "/usr/local/bin" exec-path)
-(add-to-list 'load-path emacs-root-dir)
+
+(setq default-directory "~/.emacs.d/")
+(add-to-list 'load-path (expand-file-name "./lisp/" default-directory))
 
 (load "functions")
 (load "env")
