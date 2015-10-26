@@ -16,6 +16,10 @@
 ;; blinking cursor
 (blink-cursor-mode t)
 
+;; enable mouse gestures in terminal
+(require 'mouse)
+(xterm-mouse-mode t)
+
 ;; disable alarm bell beep
 (setq visible-bell t)
 
