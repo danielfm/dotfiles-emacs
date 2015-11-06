@@ -26,3 +26,10 @@
 
 (add-to-list 'el-get-sources
              '(:name makey))
+
+;; better clipboard integration in osx and terminal emacs
+(add-to-list 'el-get-sources
+             '(:name pbcopy
+                     :after (progn
+                              (when (eq system-type 'darwin)
+                                (turn-on-pbcopy)))))
