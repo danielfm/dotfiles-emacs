@@ -25,6 +25,11 @@
                               (global-set-key (kbd "C-h C-m") 'discover-my-major))))
 
 (add-to-list 'el-get-sources
+             '(:name tramp
+                     :after (progn
+                              (setq tramp-default-method "ssh"))))
+
+(add-to-list 'el-get-sources
              '(:name makey))
 
 ;; better clipboard integration in osx and terminal emacs
