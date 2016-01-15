@@ -20,3 +20,9 @@
 ;; disable auto-save capabilities
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+
+;; disable line wrapping
+(set-default 'truncate-lines t)
+
+;; quick whitespace-mode shortcut
+(global-set-key (kbd "C-x w") 'whitespace-mode)
