@@ -4,3 +4,6 @@ el-get
 elpa/
 tmp/*
 url/cookies
+tramp
+ido.last
+.mc-lists.el
