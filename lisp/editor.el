@@ -14,6 +14,10 @@
 (add-hook 'prog-mode-hook 'linum-mode)
 (setq linum-format "%4d  ")
 
+;; spellchecker in comments for programming modes
+(add-hook 'prog-mode-hook (lambda () (flyspell-prog-mode)))
+(setq flyspell-issue-message-flag nil)
+
 ;; enable interactive do
 (ido-mode t)
 
