@@ -7,3 +7,4 @@ url/cookies
 tramp
 ido.last
 .mc-lists.el
+*.plstore
