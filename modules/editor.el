@@ -32,11 +32,6 @@
 (add-to-list 'el-get-sources
              '(:name makey))
 
-(add-to-list 'el-get-sources
-             '(:name powerline
-                     :after (progn
-                              (powerline-default-theme))))
-
 ;; better clipboard integration in osx and terminal emacs
 (add-to-list 'el-get-sources
              '(:name pbcopy
