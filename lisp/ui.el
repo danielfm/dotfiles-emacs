@@ -28,7 +28,7 @@
   (set-default-font "Monaco"))
 
 ;; my theme of choice
-(load-theme 'tomorrow-night t)
+(load-theme 'zenburn t)
 
 ;; available custom themes
 ;;
