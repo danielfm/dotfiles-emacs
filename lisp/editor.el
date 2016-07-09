@@ -12,7 +12,7 @@
 
 ;; show line numbers in programming modes
 (add-hook 'prog-mode-hook 'linum-mode)
-(setq linum-format "%4d  ")
+(setq linum-format "%4d ")
 
 ;; spellchecker in comments for programming modes
 (add-hook 'prog-mode-hook (lambda () (flyspell-prog-mode)))
