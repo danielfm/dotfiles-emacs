@@ -2,18 +2,6 @@
 		   "\\.rake\\'" "\\.ru\\'" "\\.gemspec$"))
 
 (add-to-list 'el-get-sources
-	     '(:name bundler))
-
-(add-to-list 'el-get-sources
-	     '(:name feature-mode))
-
-(add-to-list 'el-get-sources
-	     '(:name ruby-test-mode))
-
-(add-to-list 'el-get-sources
-	     '(:name rvm))
-
-(add-to-list 'el-get-sources
 	     '(:name scss-mode
 		     :after (setq scss-compile-at-save nil)))
 

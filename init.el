@@ -9,6 +9,5 @@
 (load "editor")
 (load "ui")
 (load "window")
-(load "https")
 
 (server-start)
