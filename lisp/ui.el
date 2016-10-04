@@ -21,7 +21,7 @@
 (xterm-mouse-mode t)
 
 ;; disable alarm bell beep
-(setq visible-bell t)
+(setq visible-bell nil)
 
 ;; use Monaco font in Mac OS X
 (when (eq system-type 'darwin)
