@@ -2,6 +2,11 @@
              '(:name markdown-mode))
 
 (add-to-list 'el-get-sources
+             '(:name pbcopy
+                     :after (progn
+                              (turn-on-pbcopy))))
+
+(add-to-list 'el-get-sources
 	     '(:name multiple-cursors
                      :after (progn
                               (global-set-key (kbd "C-c *") 'mc/edit-lines)
