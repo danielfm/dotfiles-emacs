@@ -1,7 +1,5 @@
-(add-to-list 'el-get-sources
-	     '(:name go-mode
-                     :after (progn
-                              (add-hook 'before-save-hook #'gofmt-before-save))))
+(el-get-bundle go-lint)
 
-(add-to-list 'el-get-sources
-             '(:name go-lint))
+(el-get-bundle go-mode
+               (progn
+                 (add-hook 'befgore-save-hook #'gofmt-before-save)))

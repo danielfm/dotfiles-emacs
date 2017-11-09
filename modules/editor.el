@@ -1,47 +1,19 @@
-(add-to-list 'el-get-sources
-             '(:name markdown-mode))
+(el-get-bundle markdown-mode)
+(el-get-bundle makey)
 
-(add-to-list 'el-get-sources
-             '(:name pbcopy
-                     :after (progn
-                              (turn-on-pbcopy))))
+(el-get-bundle pbcopy
+               (progn
+                 (when (eq system-type 'darwin)
+                   (turn-on-pbcopy))))
 
-(add-to-list 'el-get-sources
-	     '(:name multiple-cursors
-                     :after (progn
-                              (global-set-key (kbd "C-c *") 'mc/edit-lines)
-                              (global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
-                              (global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
-                              (global-set-key (kbd "C-c .") 'mc/mark-all-like-this)
-                              (global-set-key (kbd "C-c i") 'mc/mark-more-like-this-extended))))
+(el-get-bundle multiple-cursors
+               (progn
+                 (global-set-key (kbd "C-c *") 'mc/edit-lines)
+                 (global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
+                 (global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
+                 (global-set-key (kbd "C-c .") 'mc/mark-all-like-this)
+                 (global-set-key (kbd "C-c i") 'mc/mark-more-like-this-extended)))
 
-(add-to-list 'el-get-sources
-             '(:name editorconfig
-                     :type github
-                     :description "EditorConfig plugin for Emacs"
-                     :pkgname "editorconfig/editorconfig-emacs"
-                     :url "https://github.com/editorconfig/editorconfig-emacs"
-                     :after (progn
-                              (load "editorconfig"))))
-
-(add-to-list 'el-get-sources
-             '(:name discover-my-major
-                     :type git
-                     :url "https://github.com/steckerhalter/discover-my-major"
-                     :after (progn
-                              (global-set-key (kbd "C-h C-m") 'discover-my-major))))
-
-(add-to-list 'el-get-sources
-             '(:name tramp
-                     :after (progn
-                              (setq tramp-default-method "ssh"))))
 
 (add-to-list 'el-get-sources
              '(:name makey))
-
-;; better clipboard integration in osx and terminal emacs
-(add-to-list 'el-get-sources
-             '(:name pbcopy
-                     :after (progn
-                              (when (eq system-type 'darwin)
-                                (turn-on-pbcopy)))))

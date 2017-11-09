@@ -9,9 +9,15 @@
       (goto-char (point-max))
       (eval-print-last-sexp))))
 
+(setq recipe-dir (expand-file-name "el-get-user/recipes" default-directory))
+(add-to-list 'el-get-recipe-path recipe-dir)
+
 ;; load all .el files inside `modules-dir`
 (setq modules-dir (expand-file-name "modules" default-directory))
 (mapc 'load (directory-files modules-dir 't "^[^#].*el$"))
 
+;; requirement for lots of modes these days :(
+(el-get-bundle s)
+
 ;; install all missing packages via el-get
-(el-get 'sync (mapcar 'el-get-source-name el-get-sources))
+(el-get 'sync)

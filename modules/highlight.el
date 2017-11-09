@@ -1,2 +1,1 @@
-(add-to-list 'el-get-sources
-	     '(:name highlight-parentheses))
+(el-get-bundle highlight-parentheses)

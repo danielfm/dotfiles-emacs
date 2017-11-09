@@ -1,2 +1,1 @@
-(add-to-list 'el-get-sources
-	     '(:name erc))
+(el-get-bundle erc)

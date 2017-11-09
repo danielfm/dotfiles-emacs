@@ -28,20 +28,4 @@
   (set-default-font "Monaco"))
 
 ;; my theme of choice
-(load-theme 'tomorrow-night t)
-
-;; available custom themes
-;;
-;; solarized:
-;; (load-theme 'solarized t)
-;; (load-theme 'solarized-dark t)
-;;
-;; tomorrow:
-;; (load-theme 'tomorrow t)
-;; (load-theme 'tomorrow-night t)
-;; (load-theme 'tomorrow-night-bright t)
-;; (load-theme 'tomorrow-night-blue t)
-;; (load-theme 'tomorrow-night-eighties t)
-;;
-;; zenburn:
-;; (load-theme 'zenburn t)
+(load-theme 'zenburn t)

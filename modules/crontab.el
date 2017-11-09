@@ -1,2 +1,1 @@
-(add-to-list 'el-get-sources
-	     '(:name crontab-mode))
+(el-get-bundle crontab-mode)
