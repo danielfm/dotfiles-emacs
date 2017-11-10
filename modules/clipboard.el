@@ -1,4 +1,4 @@
-(el-get-bundle pbcopy
-  (progn
-    (when (eq system-type 'darwin)
+(when (eq system-type 'darwin)
+  (el-get-bundle pbcopy
+    (progn
       (turn-on-pbcopy))))
