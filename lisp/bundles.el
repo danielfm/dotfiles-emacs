@@ -9,42 +9,38 @@
 (el-get-bundle yaml-mode)
 
 ;; magit
-(el-get-bundle magit
-  (progn
-    (global-set-key (kbd "C-x g") 'magit-status)
-    (setq magit-auto-revert-mode nil)
-    (setq magit-push-always-verify nil)
-    (setq magit-last-seen-setup-instructions "1.4.0")))
+(el-get-bundle! magit
+  (global-set-key (kbd "C-x g") 'magit-status)
+  (defvar magit-auto-revert-mode nil)
+  (defvar magit-push-always-verify nil)
+  (defvar magit-last-seen-setup-instructions "1.4.0"))
 
 ;; multiple cursors
-(el-get-bundle multiple-cursors
-  (progn
-    (global-set-key (kbd "C-c *") 'mc/edit-lines)
-    (global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
-    (global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
-    (global-set-key (kbd "C-c .") 'mc/mark-all-like-this)
-    (global-set-key (kbd "C-c i") 'mc/mark-more-like-this-extended)))
+(el-get-bundle! multiple-cursors
+  (global-set-key (kbd "C-c *") 'mc/edit-lines)
+  (global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c .") 'mc/mark-all-like-this)
+  (global-set-key (kbd "C-c i") 'mc/mark-more-like-this-extended))
 
 ;; golang
 (el-get-bundle go-lint)
+
 (el-get-bundle go-mode
-               (progn
-                 (add-hook 'befgore-save-hook #'gofmt-before-save)))
+  (add-hook 'before-save-hook #'gofmt-before-save))
 
 ;; docker
 (el-get-bundle dockerfile-mode
-  (progn
-    (add-to-list 'auto-mode-alist (cons "\\.env" 'conf-mode))))
+  (add-to-list 'auto-mode-alist (cons "\\.env" 'conf-mode)))
 
 ;; terraform
-(el-get-bundle terraform-mode
-  (progn
-    (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)))
+(el-get-bundle terraform-mode)
+(with-eval-after-load 'terraform-mode
+  (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode))
 
 ;; groovy (mainly for Jenkinsfile)
 (el-get-bundle groovy-emacs-mode
-  (progn
-    (add-to-list 'auto-mode-alist (cons "Jenkinsfile" 'groovy-mode))))
+  (add-to-list 'auto-mode-alist (cons "Jenkinsfile" 'groovy-mode)))
 
 ;; extra functionality
 
@@ -61,5 +57,4 @@
 ;; better clipboard support in OSX
 (when (eq system-type 'darwin)
   (el-get-bundle pbcopy
-    (progn
-      (turn-on-pbcopy))))
+    (turn-on-pbcopy)))
