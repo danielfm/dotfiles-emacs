@@ -1,5 +1,8 @@
-;; File modes
+;; Themes
+(el-get-bundle color-theme-zenburn)
 
+;; File modes
+(el-get-bundle s)
 (el-get-bundle crontab-mode)
 (el-get-bundle nginx-mode)
 (el-get-bundle markdown-mode)
@@ -54,3 +57,9 @@
 ;; Enable flex matching in ido-mode
 (add-hook 'ido-setup-hook (lambda ()
 			    (setq ido-enable-flex-matching t)))
+
+;; Better clipboard support in OSX
+(when (eq system-type 'darwin)
+  (el-get-bundle pbcopy
+    (progn
+      (turn-on-pbcopy))))

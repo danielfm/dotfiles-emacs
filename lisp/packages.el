@@ -1,4 +1,4 @@
-;; load el-get
+;; Loads el-get
 (add-to-list 'load-path (expand-file-name "el-get/el-get" default-directory))
 
 (unless (require 'el-get nil 'noerror)
@@ -12,12 +12,6 @@
 (setq recipe-dir (expand-file-name "el-get-user/recipes" default-directory))
 (add-to-list 'el-get-recipe-path recipe-dir)
 
-;; load all .el files inside `modules-dir`
-(setq modules-dir (expand-file-name "modules" default-directory))
-(mapc 'load (directory-files modules-dir 't "^[^#].*el$"))
-
-;; requirement for lots of modes these days :(
-(el-get-bundle s)
-
-;; install all missing packages via el-get
+;; Install all missing packages via el-get
+(load "bundles")
 (el-get 'sync)
