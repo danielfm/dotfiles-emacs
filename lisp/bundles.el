@@ -25,7 +25,6 @@
 
 ;; golang
 (el-get-bundle go-lint)
-
 (el-get-bundle go-mode
   (add-hook 'before-save-hook #'gofmt-before-save))
 
