@@ -18,11 +18,11 @@
 
 ;; multiple cursors
 (el-get-bundle! multiple-cursors
-  (global-set-key (kbd "C-c *") 'mc/edit-lines)
-  (global-set-key (kbd "C-c >") 'mc/mark-next-like-this)
-  (global-set-key (kbd "C-c <") 'mc/mark-previous-like-this)
-  (global-set-key (kbd "C-c .") 'mc/mark-all-like-this)
-  (global-set-key (kbd "C-c i") 'mc/mark-more-like-this-extended))
+  (global-set-key (kbd "C-c m *") 'mc/edit-lines)
+  (global-set-key (kbd "C-c m >") 'mc/mark-next-like-this)
+  (global-set-key (kbd "C-c m <") 'mc/mark-previous-like-this)
+  (global-set-key (kbd "C-c m .") 'mc/mark-all-like-this)
+  (global-set-key (kbd "C-c m i") 'mc/mark-more-like-this-extended))
 
 ;; golang
 (el-get-bundle go-lint)

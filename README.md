@@ -72,14 +72,17 @@ C-c <left>   windmove-left
 C-c <right>  windmove-right
 ````
 
+Optionally, you could drag the window edges with the mouse in order to resize
+each window as desired.
 
 ### Multiple Cursors
 
 ````
-C-c *    mc/edit-lines
-C-c .    mc/mark-all-like-this
-C-c >    mc/mark-next-like-this
-C-c <    mc/mark-previous-like-this
+C-c m *    mc/edit-lines
+C-c m .    mc/mark-all-like-this
+C-c m >    mc/mark-next-like-this
+C-c m <    mc/mark-previous-like-this
+C-c m i    mc/mark-more-like-this-extended
 ````
 
 
