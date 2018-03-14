@@ -9,11 +9,12 @@
 (el-get-bundle yaml-mode)
 
 ;; magit
-(el-get-bundle! magit
-  (global-set-key (kbd "C-x g") 'magit-status)
+(el-get-bundle! magit)
+(with-eval-after-load 'magit
   (defvar magit-auto-revert-mode nil)
   (defvar magit-push-always-verify nil)
-  (defvar magit-last-seen-setup-instructions "1.4.0"))
+  (defvar magit-last-seen-setup-instructions "1.4.0")
+  (global-set-key (kbd "C-x g") 'magit-status))
 
 ;; multiple cursors
 (el-get-bundle! multiple-cursors
@@ -42,6 +43,7 @@
 
 ;; groovy (mainly for Jenkinsfile)
 (el-get-bundle groovy-emacs-mode
+  (setq groovy-indent-offset 2)
   (add-to-list 'auto-mode-alist (cons "Jenkinsfile" 'groovy-mode)))
 
 ;; extra functionality
