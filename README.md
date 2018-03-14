@@ -88,7 +88,6 @@ C-c <    mc/mark-previous-like-this
 While building this configuration, I borrowed some ideas/code from others:
 
 * [Prelude](https://github.com/bbatsov/prelude)
-* [Peleteiro's dotfiles](https://github.com/peleteiro/dotfiles)
 
 
 ## License
