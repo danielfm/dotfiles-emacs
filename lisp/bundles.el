@@ -36,6 +36,11 @@
 (el-get-bundle dockerfile-mode
   (add-to-list 'auto-mode-alist (cons "\\.env" 'conf-mode)))
 
+;; js
+(el-get-bundle js2-mode
+  (add-to-list 'auto-mode-alist (cons "\\.js" 'js2-mode))
+  (setq js-indent-level 2))
+
 ;; terraform
 (el-get-bundle terraform-mode)
 (with-eval-after-load 'terraform-mode
@@ -62,3 +67,29 @@
 (when (eq system-type 'darwin)
   (el-get-bundle pbcopy
     (turn-on-pbcopy)))
+
+;; org
+(el-get-bundle org-mode)
+
+;; org-mode key bindings
+(define-key global-map "\C-ca" 'org-agenda)
+(define-key global-map "\C-cc" 'org-capture)
+
+;; org-mode directory
+(setq org-directory "~/Dropbox/notes")
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(setq org-agenda-files (directory-files-recursively org-directory "\.org$"))
+
+;; org-mode workflow steps
+(setq org-todo-keywords '((sequence "TODO(t)" "WIP(w!)" "|" "DONE(d@)" "CANCELED(c@)")))
+
+;; org-mode babel languages
+(org-babel-do-load-languages 'org-babel-load-languages '((emacs-lisp . t)
+                                                         (ledger . t)
+                                                         (python . t)
+                                                         (ruby . t)
+                                                         (shell . t)))
+
+;; other org-mode flags
+(setq org-hide-leading-stars t)
+(setq org-src-fontify-natively t)
