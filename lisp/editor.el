@@ -15,7 +15,7 @@
 (setq linum-format "%4d ")
 
 ;; spellchecker in comments for programming modes
-(add-hook 'prog-mode-hook (lambda () (flyspell-prog-mode)))
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 (setq flyspell-issue-message-flag nil)
 
 ;; enable interactive do
@@ -30,3 +30,6 @@
 
 ;; quick whitespace-mode shortcut
 (global-set-key (kbd "C-x w") 'whitespace-mode)
+
+;; enable follow-mode for multi-column editing in large screens
+(add-hook 'prog-mode-hook 'follow-mode)
