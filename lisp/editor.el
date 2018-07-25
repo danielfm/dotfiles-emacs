@@ -1,3 +1,9 @@
+;; frame title format
+(setq frame-title-format '("" "%b (emacs)"))
+
+;; text filling set to 80 chars
+(set-fill-column 80)
+
 ;; set your desired tab width
 (setq-default indent-tabs-mode nil)
 
@@ -9,10 +15,6 @@
 
 ;; highlight current line
 (add-hook 'after-change-major-mode-hook 'hl-line-mode)
-
-;; show line numbers in programming modes
-(add-hook 'prog-mode-hook 'linum-mode)
-(setq linum-format "%4d ")
 
 ;; spellchecker in comments for programming modes
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
@@ -27,9 +29,3 @@
 
 ;; disable line wrapping
 (set-default 'truncate-lines t)
-
-;; quick whitespace-mode shortcut
-(global-set-key (kbd "C-x w") 'whitespace-mode)
-
-;; enable follow-mode for multi-column editing in large screens
-(add-hook 'prog-mode-hook 'follow-mode)

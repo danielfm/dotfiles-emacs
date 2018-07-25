@@ -1,28 +1,35 @@
 ;; themes
 (el-get-bundle color-theme-zenburn)
+(el-get-bundle solarized-emacs)
+(el-get-bundle monokai-theme)
+(el-get-bundle material-theme)
+
+;; powerline
+(el-get-bundle powerline)
+(setq powerline-default-separator 'arrow)
 
 ;; file modes
 (el-get-bundle s)
 (el-get-bundle crontab-mode)
 (el-get-bundle nginx-mode)
-(el-get-bundle markdown-mode)
 (el-get-bundle yaml-mode)
+
+;; Markdown
+(el-get-bundle markdown-mode)
+(setq markdown-max-image-size '(600 . 600))
+
+;; spell check
+(el-get-bundle 'flycheck)
 
 ;; magit
 (el-get-bundle! magit)
 (with-eval-after-load 'magit
   (defvar magit-auto-revert-mode nil)
   (defvar magit-push-always-verify nil)
-  (defvar magit-last-seen-setup-instructions "1.4.0")
-  (global-set-key (kbd "C-x g") 'magit-status))
+  (defvar magit-last-seen-setup-instructions "1.4.0"))
 
 ;; multiple cursors
-(el-get-bundle! multiple-cursors
-  (global-set-key (kbd "C-c m *") 'mc/edit-lines)
-  (global-set-key (kbd "C-c m >") 'mc/mark-next-like-this)
-  (global-set-key (kbd "C-c m <") 'mc/mark-previous-like-this)
-  (global-set-key (kbd "C-c m .") 'mc/mark-all-like-this)
-  (global-set-key (kbd "C-c m i") 'mc/mark-more-like-this-extended))
+(el-get-bundle! multiple-cursors)
 
 ;; golang
 (el-get-bundle go-lint)
@@ -38,8 +45,8 @@
 
 ;; js
 (el-get-bundle js2-mode
-  (add-to-list 'auto-mode-alist (cons "\\.js" 'js2-mode))
-  (setq js-indent-level 2))
+  (add-to-list 'auto-mode-alist (cons "\\.js" 'js2-mode)))
+(setq js-indent-level 2)
 
 ;; terraform
 (el-get-bundle terraform-mode)
@@ -48,8 +55,8 @@
 
 ;; groovy (mainly for Jenkinsfile)
 (el-get-bundle groovy-emacs-mode
-  (setq groovy-indent-offset 2)
   (add-to-list 'auto-mode-alist (cons "Jenkinsfile" 'groovy-mode)))
+(setq groovy-indent-offset 2)
 
 ;; extra functionality
 
@@ -71,9 +78,8 @@
 ;; org
 (el-get-bundle org-mode)
 
-;; org-mode key bindings
-(define-key global-map "\C-ca" 'org-agenda)
-(define-key global-map "\C-cc" 'org-capture)
+;; do not display org-clock in mode-line
+(setq org-clock-clocked-in-display nil)
 
 ;; org-mode directory
 (setq org-directory "~/Dropbox/notes")

@@ -11,7 +11,6 @@
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (scroll-bar-mode -1)
-(set-fringe-style -1)
 
 ;; blinking cursor
 (blink-cursor-mode t)
@@ -27,5 +26,13 @@
 (when (eq system-type 'darwin)
   (set-default-font "Monaco"))
 
-;; my theme of choice
-(load-theme 'zenburn t)
+;; my (current) theme of choice
+(load-theme 'tomorrow-night t)
+
+;; powerline
+(setq ns-use-srgb-colorspace nil)
+(powerline-default-theme)
+
+;; emacs-plus natural bar for better looks in OS X
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))

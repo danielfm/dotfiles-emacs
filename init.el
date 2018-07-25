@@ -14,6 +14,6 @@
 (load "packages")
 (load "editor")
 (load "ui")
-(load "window")
+(load "keys")
 
 (server-start)

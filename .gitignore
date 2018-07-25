@@ -3,6 +3,8 @@ network-security.data
 el-get
 .*~
 elpa/
+url/
+eshell/
 tmp/*
 url/cookies
 tramp
