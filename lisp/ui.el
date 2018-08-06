@@ -27,7 +27,7 @@
   (set-default-font "Monaco"))
 
 ;; my (current) theme of choice
-(load-theme 'tomorrow-night t)
+(load-theme 'material t)
 
 ;; powerline
 (setq ns-use-srgb-colorspace nil)
