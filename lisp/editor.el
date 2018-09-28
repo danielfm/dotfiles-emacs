@@ -28,4 +28,21 @@
 (setq auto-save-default nil)
 
 ;; disable line wrapping
-(set-default 'truncate-lines t)
+(global-visual-line-mode t)
+
+;; enable flex matching in ido-mode
+(add-hook 'ido-setup-hook (lambda ()
+			    (setq ido-enable-flex-matching t)))
+
+;; move to a neighbor window using SHIFT-<arrow-key>
+(windmove-default-keybindings)
+
+;; enlarge and shrink windows
+(global-set-key (kbd "C-c <up>")    'shrink-window)
+(global-set-key (kbd "C-c <right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-c <down>")  'enlarge-window)
+(global-set-key (kbd "C-c <left>")  'shrink-window-horizontally)
+
+;; sane split window shortcuts
+(global-set-key (kbd "C-x _") 'split-window-below)
+(global-set-key (kbd "C-x |") 'split-window-right)

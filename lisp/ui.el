@@ -26,13 +26,6 @@
 (when (eq system-type 'darwin)
   (set-default-font "Monaco"))
 
-;; my (current) theme of choice
-(load-theme 'material t)
-
-;; powerline
-(setq ns-use-srgb-colorspace nil)
-(powerline-default-theme)
-
 ;; emacs-plus natural bar for better looks in OS X
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))

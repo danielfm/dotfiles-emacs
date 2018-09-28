@@ -1,8 +1,7 @@
 # My Emacs Configuration
 
-This is a simple [El-Get](https://github.com/dimitri/el-get)-based
-configuration that automatically loads the packages I need in order to work
-on my professional and personal projects.
+This configuration automatically loads the packages I need in order to work on
+my professional and personal projects.
 
 
 ## Compatibility
