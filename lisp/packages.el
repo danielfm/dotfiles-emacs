@@ -12,12 +12,9 @@
 
 ;; themes
 
-(use-package solarized-theme
-  :ensure t)
-
-(use-package material-theme
+(use-package gruvbox-theme
   :ensure t
-  :config (load-theme 'material t))
+  :config (load-theme 'gruvbox-dark-soft t))
 
 ;; file modes
 

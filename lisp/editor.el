@@ -27,12 +27,9 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
-;; disable line wrapping
-(global-visual-line-mode t)
-
 ;; enable flex matching in ido-mode
 (add-hook 'ido-setup-hook (lambda ()
-			    (setq ido-enable-flex-matching t)))
+                            (setq ido-enable-flex-matching t)))
 
 ;; move to a neighbor window using SHIFT-<arrow-key>
 (windmove-default-keybindings)
