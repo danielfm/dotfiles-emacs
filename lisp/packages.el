@@ -10,11 +10,17 @@
 
 ;; package configuration
 
-;; themes
+;; theme
 
 (use-package gruvbox-theme
   :ensure t
-  :config (load-theme 'gruvbox-dark-soft t))
+  :config (progn
+            (load-theme 'gruvbox-dark-soft t)
+
+            ;; emacs-plus natural bar for better looks in OS X
+            (setq default-frame-alist '((ns-appearance . dark)
+                                        (ns-transparent-titlebar . t)
+                                        (vertical-scroll-bars)))))
 
 ;; file modes
 
@@ -133,7 +139,6 @@
             (setq org-refile-targets `((,(concat org-directory "/gtd.org") :maxlevel . 3)
                                        (,(concat org-directory "/someday.org") :level . 1)
                                        (,(concat org-directory "/tickler.org") :maxlevel . 2)))
-
 
             ;; workflow steps
             (setq org-todo-keywords '((sequence "TODO(t)" "WIP(w)" "REVIEW(r)" "|" "DONE(d@)" "CANCELED(c@)")))

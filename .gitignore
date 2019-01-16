@@ -13,3 +13,4 @@ ido.last
 .mc-lists.el
 *.plstore
 session.*
+custom.el

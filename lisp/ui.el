@@ -25,7 +25,3 @@
 ;; use Monaco font in Mac OS X
 (when (eq system-type 'darwin)
   (set-default-font "Monaco"))
-
-;; emacs-plus natural bar for better looks in OS X
-(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
-(add-to-list 'default-frame-alist '(ns-appearance . dark))
