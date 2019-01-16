@@ -16,8 +16,11 @@
 ;; highlight current line
 (add-hook 'after-change-major-mode-hook 'hl-line-mode)
 
-;; spellchecker in comments for programming modes
-(add-hook 'prog-mode-hook 'flyspell-prog-mode)
+;; enable spellchecker in some contexts
+(add-hook 'prog-mode-hook 'flyspell-mode)
+(add-hook 'org-mode-hook  'flyspell-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+
 (setq flyspell-issue-message-flag nil)
 
 ;; enable interactive do
