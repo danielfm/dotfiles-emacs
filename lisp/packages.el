@@ -121,8 +121,9 @@
             ;; english dates regardless of the system locale
             (setq system-time-locale "C")
 
-            ;; enable auto-indentation
+            ;; enable auto-indentation with proper line-wrapping
             (setq org-startup-indented t)
+            (add-hook 'org-mode-hook 'visual-line-mode)
 
             ;; org-agenda configuration
             (setq org-agenda-files `(,(concat org-directory "/tickler.org")
@@ -143,6 +144,10 @@
             ;; workflow steps
             (setq org-todo-keywords '((sequence "TODO(t)" "WIP(w)" "REVIEW(r)" "|" "DONE(d@)" "CANCELED(c@)")))
 
-            ;; other Org-mode flags
+            ;; persist clock across sessions
+            (setq org-clock-persist 'history)
+            (org-clock-persistence-insinuate)
+
+            ;; other configs
             (setq org-hide-leading-stars t)
             (setq org-src-fontify-natively t)))
