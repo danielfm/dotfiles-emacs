@@ -12,10 +12,10 @@
 
 ;; theme
 
-(use-package gruvbox-theme
+(use-package dracula-theme
   :ensure t
   :config (progn
-            (load-theme 'gruvbox-dark-soft t)
+            (load-theme 'dracula t)
 
             ;; emacs-plus natural bar for better looks in OS X
             (setq default-frame-alist '((ns-appearance . dark)
