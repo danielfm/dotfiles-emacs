@@ -127,7 +127,9 @@
 
             ;; org-agenda configuration
             (setq org-agenda-files `(,(concat org-directory "/tickler.org")
+                                     ,(concat org-directory "/tickler.org_archive")
                                      ,(concat org-directory "/gtd.org")
+                                     ,(concat org-directory "/gtd.org_archive")
                                      ,(concat org-directory "/inbox.org")))
             ;; capture templates
             (setq org-capture-templates `(("t" "Todo [inbox]" entry
