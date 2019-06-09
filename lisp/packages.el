@@ -10,17 +10,15 @@
 
 ;; package configuration
 
-;; theme
+;; themes
+
+;; customize title bar for dark themes
+(setq default-frame-alist '((ns-appearance . dark)
+                            (ns-transparent-titlebar . t)
+                            (vertical-scroll-bars)))
 
 (use-package dracula-theme
-  :ensure t
-  :config (progn
-            (load-theme 'dracula t)
-
-            ;; emacs-plus natural bar for better looks in OS X
-            (setq default-frame-alist '((ns-appearance . dark)
-                                        (ns-transparent-titlebar . t)
-                                        (vertical-scroll-bars)))))
+  :ensure t)
 
 ;; file modes
 
