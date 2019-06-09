@@ -13,6 +13,9 @@
 ;; highlight matching parens
 (show-paren-mode t)
 
+;; auto-add closing pairs (parens, quotes, etc)
+(electric-pair-mode t)
+
 ;; highlight current line
 (add-hook 'after-change-major-mode-hook 'hl-line-mode)
 
