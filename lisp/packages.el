@@ -12,11 +12,6 @@
 
 ;; themes
 
-;; customize title bar for dark themes
-(setq default-frame-alist '((ns-appearance . dark)
-                            (ns-transparent-titlebar . t)
-                            (vertical-scroll-bars)))
-
 (use-package dracula-theme
   :ensure t)
 
@@ -151,3 +146,20 @@
             ;; other configs
             (setq org-hide-leading-stars t)
             (setq org-src-fontify-natively t)))
+
+;; spotify
+
+(add-to-list 'load-path "~/Projects/spotify.el")
+(require 'spotify)
+
+;; (setq spotify-oauth2-client-id "")
+;; (setq spotify-oauth2-client-secret "")
+
+(setq spotify-mode-line-refresh-interval 5)
+(setq spotify-mode-line-truncate-length 20)
+(setq spotify-mode-line-format "[%p: %a - %t ◷ %l %r%s]")
+
+(setq spotify-api-locale "pt_BR")
+(setq spotify-api-country "BR")
+
+(global-spotify-remote-mode t)
