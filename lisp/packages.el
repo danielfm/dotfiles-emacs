@@ -12,8 +12,9 @@
 
 ;; themes
 
-(use-package dracula-theme
-  :ensure t)
+(use-package material-theme
+  :ensure t
+  :config (load-theme 'material t))
 
 ;; file modes
 
