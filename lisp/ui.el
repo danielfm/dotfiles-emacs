@@ -23,10 +23,3 @@
 
 ;; disable alarm bell beep
 (setq ring-bell-function 'ignore)
-<<<<<<< HEAD
-
-;; use Monaco font in Mac OS X
-(when (eq system-type 'darwin)
-  (set-default-font "Monaco"))
-=======
->>>>>>> Remove unused stuff
