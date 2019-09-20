@@ -17,6 +17,9 @@
 ;; blinking cursor
 (blink-cursor-mode t)
 
+;; rely on the system monospace font for more consistent experience across apps
+(set-frame-font "monospace 12")
+
 ;; enable mouse gestures in terminal
 (require 'mouse)
 (xterm-mouse-mode t)
