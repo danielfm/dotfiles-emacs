@@ -1,9 +1,10 @@
 ;; package repositories
 (setq package-archives '(("gnu"          . "https://elpa.gnu.org/packages/")
                          ("marmalade"    . "https://marmalade-repo.org/packages/")
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")))
+                         ("melpa-stable" . "https://melpa.org/packages/")))
 
 ;; install use-package
+
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
   (package-install 'use-package))
@@ -57,6 +58,9 @@
   :config (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode))
 
 ;; editing experience
+
+(use-package better-defaults
+  :ensure t)
 
 (use-package paredit
   :ensure t
