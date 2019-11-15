@@ -29,6 +29,10 @@
 ;; enable interactive do
 (ido-mode t)
 
+(setq default-indicate-empty-lines t)
+(setq require-final-newline t)
+(setq show-trailing-whitespace t)
+
 ;; disable auto-save capabilities
 (setq make-backup-files nil)
 (setq auto-save-default nil)
