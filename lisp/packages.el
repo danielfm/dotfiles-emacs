@@ -13,9 +13,13 @@
 
 ;; themes
 
-(use-package material-theme
+;; (use-package xresources-theme
+;;   :ensure t
+;;   :config (load-theme 'xresources t))
+
+(use-package birds-of-paradise-plus-theme
   :ensure t
-  :config (load-theme 'material t))
+  :config (load-theme 'birds-of-paradise-plus t))
 
 ;; file modes
 
