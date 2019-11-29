@@ -13,13 +13,8 @@
 
 ;; themes
 
-;; (use-package xresources-theme
-;;   :ensure t
-;;   :config (load-theme 'xresources t))
-
-(use-package birds-of-paradise-plus-theme
-  :ensure t
-  :config (load-theme 'birds-of-paradise-plus t))
+(use-package dracula-theme
+  :ensure t)
 
 ;; file modes
 
@@ -90,11 +85,6 @@
          ("C-c m ." . mc/mark-all-like-this)
          ("C-c m i" . mc/mark-more-like-this-extended)))
 
-(use-package pbcopy
-  :ensure t
-  :if (eq system-type 'darwin)
-  :config (turn-on-pbcopy))
-
 (use-package rainbow-delimiters
   :ensure t
   :config (add-hook 'prog-mode-hook 'rainbow-delimiters-mode))
@@ -158,17 +148,37 @@
 
 ;; spotify
 
+(setq spotify-keymap-prefix "M-p")
+
 (add-to-list 'load-path "~/Projects/spotify.el")
 (require 'spotify)
 
-;; (setq spotify-oauth2-client-id "")
-;; (setq spotify-oauth2-client-secret "")
+(setq spotify-oauth2-client-id "543b87d8c96e4a908ef0188d1fb8f8c1")
+(setq spotify-oauth2-client-secret "8c2b9a00f25849e383598e62fed01e8d")
+
+(setq spotify-genius-token "Dxpe0urpYxZ0NQhKjGrkJJTXh9HXGkxgzTUd_xKfrakBplDq5PkO2sociIuV6piv")
 
 (setq spotify-mode-line-refresh-interval 5)
+(setq spotify-player-status-refresh-interval 5)
+
 (setq spotify-mode-line-truncate-length 20)
-(setq spotify-mode-line-format "[%p: %a - %t ◷ %l %r%s]")
+(setq spotify-player-status-truncate-length 20)
+
+(setq spotify-mode-line-playing-text "P")
+(setq spotify-player-status-playing-text "P")
+(setq spotify-mode-line-paused-text "-")
+(setq spotify-player-status-paused-text "-")
+(setq spotify-mode-line-stopped-text "-")
+(setq spotify-player-status-stopped-text "-")
+
+(setq spotify-mode-line-format "[%a - %t][%p%r%s]")
+(setq spotify-player-status-format "[%a - %t][%p%r%s]")
 
 (setq spotify-api-locale "pt_BR")
 (setq spotify-api-country "BR")
 
-(global-spotify-remote-mode t)
+(setq spotify-transport 'connect)
+
+;; (global-spotify-remote-mode t)
+
+
