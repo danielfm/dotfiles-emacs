@@ -13,8 +13,9 @@
 
 ;; themes
 
-(use-package dracula-theme
-  :ensure t)
+ (use-package material-theme
+   :ensure t
+   :config (load-theme 'material-light t))
 
 ;; file modes
 
@@ -41,6 +42,10 @@
 (use-package go-mode
   :ensure t
   :config (add-hook 'before-save-hook #'gofmt-before-save))
+
+(use-package scala-mode
+  :ensure t
+  :mode "\\.s\\(cala\\|bt\\)$")
 
 (use-package groovy-mode
   :ensure t
@@ -145,6 +150,15 @@
             ;; other configs
             (setq org-hide-leading-stars t)
             (setq org-src-fontify-natively t)))
+
+;; sanitize minor mode names
+
+(use-package diminish
+  :ensure t
+  :config (progn
+            (diminish 'paredit-mode " ()")
+            (diminish 'flyspell-mode " ~")
+            (diminish 'eldoc-mode " doc")))
 
 ;; spotify
 
