@@ -1,3 +1,6 @@
+backups
+transient
+places
 bookmarks
 auto-save-list
 network-security.data
@@ -11,6 +14,7 @@ url/cookies
 tramp
 ido.last
 .mc-lists.el
+org-clock-save.el
 *.plstore
 session.*
 custom.el
