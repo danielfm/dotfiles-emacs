@@ -112,7 +112,7 @@
          ("C-c c" . org-capture)
          ("C-c l" . org-store-link))
   :config (progn
-            (setq org-directory "~/Dropbox/notes")
+            (setq org-directory "~/Dropbox/Notes")
             (setq org-default-notes-file (concat org-directory "/notes.org"))
 
             ;; english dates regardless of the system locale
