@@ -1,7 +1,7 @@
 ;; frame title format
 (setq frame-title-format '("" "%b (emacs)"))
 
-;; text filling set to 80 chars
+
 (set-fill-column 80)
 
 ;; set your desired tab width
@@ -45,10 +45,10 @@
 (windmove-default-keybindings)
 
 ;; enlarge and shrink windows
-(global-set-key (kbd "C-c <up>")    'shrink-window)
-(global-set-key (kbd "C-c <right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "C-c <down>")  'enlarge-window)
-(global-set-key (kbd "C-c <left>")  'shrink-window-horizontally)
+(global-set-key (kbd "C-x <up>")    'shrink-window)
+(global-set-key (kbd "C-x <right>") 'enlarge-window-horizontally)
+(global-set-key (kbd "C-x <down>")  'enlarge-window)
+(global-set-key (kbd "C-x <left>")  'shrink-window-horizontally)
 
 ;; sane split window shortcuts
 (global-set-key (kbd "C-x _") 'split-window-below)
