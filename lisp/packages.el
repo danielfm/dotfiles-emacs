@@ -13,9 +13,9 @@
 
 ;; theme
 
-(use-package material-theme
+(use-package doom-themes
   :ensure t
-  :config (load-theme 'material-light t))
+  :config (load-theme 'doom-one-light t))
 
 ;; file modes
 
