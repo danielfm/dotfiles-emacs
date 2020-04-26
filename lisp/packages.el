@@ -15,7 +15,7 @@
 
 (use-package doom-themes
   :ensure t
-  :config (load-theme 'doom-one-light t))
+  :config (load-theme 'doom-opera-light t))
 
 ;; file modes
 
