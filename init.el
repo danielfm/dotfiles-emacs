@@ -18,6 +18,7 @@
 
 (add-to-list 'load-path (expand-file-name "./lisp/" default-directory))
 
+(load "functions")
 (load "env")
 (load "packages")
 (load "editor")
