@@ -13,9 +13,9 @@
 
 ;; theme
 
-(use-package material-theme
+(use-package color-theme-sanityinc-tomorrow
   :ensure t
-  :config (load-theme 'material-light t))
+  :config (load-theme 'sanityinc-tomorrow-day t))
 
 ;; file modes
 
