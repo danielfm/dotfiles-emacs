@@ -13,9 +13,9 @@
 
 ;; theme
 
-(use-package color-theme-sanityinc-tomorrow
+(use-package nord-theme
   :ensure t
-  :config (load-theme 'sanityinc-tomorrow-day t))
+  :config (load-theme 'nord t))
 
 ;; file modes
 
