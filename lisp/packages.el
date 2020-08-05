@@ -13,9 +13,9 @@
 
 ;; theme
 
-(use-package nord-theme
-  :ensure t
-  :config (load-theme 'nord t))
+;; (use-package nord-theme
+;;   :ensure t
+;;   :config (load-theme 'nord t))
 
 ;; file modes
 
