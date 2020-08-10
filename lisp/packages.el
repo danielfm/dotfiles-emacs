@@ -112,7 +112,7 @@
          ("C-c c" . org-capture)
          ("C-c l" . org-store-link))
   :config (progn
-            (setq org-directory "~/Nextcloud/Notes")
+            (setq org-directory "~/Nextcloud/Org")
             (setq org-default-notes-file (concat org-directory "/notes.org"))
 
             ;; english dates regardless of the system locale
