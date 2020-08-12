@@ -28,4 +28,5 @@
 (setq powerline-arrow-shape 'arrow)
 
 ;; font
-(set-default-font "monospace 12" nil t)
+(custom-set-faces
+ '(default ((t (:family "monospace" :height 120)))))
