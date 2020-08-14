@@ -13,9 +13,9 @@
 
 ;; theme
 
-;; (use-package nord-theme
-;;   :ensure t
-;;   :config (load-theme 'nord t))
+(use-package nord-theme
+  :ensure t
+  :config (load-theme 'nord t))
 
 ;; file modes
 
@@ -112,7 +112,7 @@
          ("C-c c" . org-capture)
          ("C-c l" . org-store-link))
   :config (progn
-            (setq org-directory "~/Nextcloud/notes")
+            (setq org-directory "~/Documents/Notes")
             (setq org-default-notes-file (concat org-directory "/notes.org"))
 
             ;; english dates regardless of the system locale
