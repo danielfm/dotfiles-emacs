@@ -14,7 +14,7 @@
 (setq default-directory "~/.emacs.d/")
 
 (setq custom-file "~/.emacs.d/custom.el")
-(load "custom" :noerror)
+(load custom-file)
 
 (add-to-list 'load-path (expand-file-name "./lisp/" default-directory))
 
