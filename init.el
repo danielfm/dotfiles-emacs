@@ -13,9 +13,6 @@
 (push "/usr/local/bin" exec-path)
 (setq default-directory "~/.emacs.d/")
 
-(setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
-
 (add-to-list 'load-path (expand-file-name "./lisp/" default-directory))
 
 (load "functions")
@@ -25,6 +22,8 @@
 (load "ui")
 
 (load "server")
-
 (unless (server-running-p)
   (server-start))
+
+(setq custom-file "~/.emacs.d/custom.el")
+(load custom-file)
