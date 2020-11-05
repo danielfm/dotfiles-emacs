@@ -13,9 +13,9 @@
 
 ;; theme
 
-(use-package nord-theme
+(use-package dracula-theme
   :ensure t
-  :config (load-theme 'nord t))
+  :config (load-theme 'dracula t))
 
 ;; file modes
 
