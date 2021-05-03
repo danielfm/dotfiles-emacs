@@ -10,6 +10,11 @@
 
 ;; package configuration
 
+;; persist scratch buffer
+(use-package persistent-scratch
+  :config
+  (persistent-scratch-setup-default))
+
 ;; theme
 
 (use-package dracula-theme
