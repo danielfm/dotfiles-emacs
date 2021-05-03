@@ -1,3 +1,4 @@
+history
 backups
 transient
 places
@@ -6,6 +7,9 @@ auto-save-list
 network-security.data
 el-get
 .*~
+.persistent-scratch
+.cache/
+request/
 elpa/
 url/
 eshell/
