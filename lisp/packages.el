@@ -10,16 +10,9 @@
 
 ;; package configuration
 
-;; persist scratch buffer
-(use-package persistent-scratch
-  :config
-  (persistent-scratch-setup-default))
-
-;; theme
-
-(use-package dracula-theme
+(use-package doom-themes
   :ensure t
-  :config (load-theme 'dracula t))
+  :config (load-theme 'doom-one-light t))
 
 ;; file modes
 
@@ -66,6 +59,10 @@
   :config (add-hook 'terraform-mode-hook #'terraform-format-on-save-mode))
 
 ;; editing experience
+
+(use-package persistent-scratch
+  :config
+  (persistent-scratch-setup-default))
 
 (use-package better-defaults
   :ensure t)
