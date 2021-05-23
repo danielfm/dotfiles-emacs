@@ -153,6 +153,12 @@
             (setq org-hide-leading-stars t)
             (setq org-src-fontify-natively t)))
 
+(use-package org-journal
+  :ensure t
+  :config (progn
+            (setq org-journal-dir (concat org-directory "/journal"))
+            (setq org-journal-file-type 'daily)))
+
 ;; sanitize minor mode names
 
 (use-package diminish
