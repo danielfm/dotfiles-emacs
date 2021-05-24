@@ -8,6 +8,7 @@ network-security.data
 el-get
 .*~
 .persistent-scratch
+*.cache
 .cache/
 request/
 elpa/

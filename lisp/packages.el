@@ -156,6 +156,7 @@
 (use-package org-journal
   :ensure t
   :config (progn
+            (setq org-journal-enable-cache t)
             (setq org-journal-dir (concat org-directory "/journal"))
             (setq org-journal-file-type 'daily)
             (setq org-journal-date-format "%A, %Y-%m-%d")
