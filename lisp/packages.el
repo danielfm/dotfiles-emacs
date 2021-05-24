@@ -158,7 +158,9 @@
   :config (progn
             (setq org-journal-dir (concat org-directory "/journal"))
             (setq org-journal-file-type 'daily)
-            (setq org-journal-date-format "%A, %Y-%m-%d")))
+            (setq org-journal-date-format "%A, %Y-%m-%d")
+            (setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'")
+            (add-to-list 'org-agenda-files org-journal-dir)))
 
 ;; sanitize minor mode names
 
