@@ -157,7 +157,8 @@
   :ensure t
   :config (progn
             (setq org-journal-dir (concat org-directory "/journal"))
-            (setq org-journal-file-type 'daily)))
+            (setq org-journal-file-type 'daily)
+            (setq org-journal-date-format "%A, %Y-%m-%d")))
 
 ;; sanitize minor mode names
 
