@@ -10,9 +10,11 @@
 
 ;; package configuration
 
-(use-package doom-themes
+(use-package timu-spacegrey-theme
   :ensure t
-  :config (load-theme 'doom-one-light t))
+  :config (progn
+            (setq timu-spacegrey-flavour "light")
+            (load-theme 'timu-spacegrey t)))
 
 ;; file modes
 
@@ -156,12 +158,18 @@
 (use-package org-journal
   :ensure t
   :config (progn
+            (defun org-journal-save-entry-and-exit()
+              (interactive)
+              (save-buffer)
+              (kill-buffer-and-window))
+
             (setq org-journal-enable-cache t)
             (setq org-journal-dir (concat org-directory "/journal"))
             (setq org-journal-file-type 'daily)
             (setq org-journal-date-format "%A, %Y-%m-%d")
             (setq org-agenda-file-regexp "\\`\\\([^.].*\\.org\\\|[0-9]\\\{8\\\}\\\(\\.gpg\\\)?\\\)\\'")
-            (add-to-list 'org-agenda-files org-journal-dir)))
+            (add-to-list 'org-agenda-files org-journal-dir)
+            (define-key org-journal-mode-map (kbd "C-x C-s") 'org-journal-save-entry-and-exit)))
 
 ;; sanitize minor mode names
 
