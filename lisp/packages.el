@@ -10,11 +10,10 @@
 
 ;; package configuration
 
-(use-package timu-spacegrey-theme
+(use-package dracula-theme
   :ensure t
   :config (progn
-            (setq timu-spacegrey-flavour "light")
-            (load-theme 'timu-spacegrey t)))
+            (load-theme 'dracula t)))
 
 ;; file modes
 
