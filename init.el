@@ -20,6 +20,7 @@
 (load "packages")
 (load "editor")
 (load "ui")
+(load "ligature")
 
 (load "server")
 (unless (server-running-p)

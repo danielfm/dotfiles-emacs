@@ -29,4 +29,4 @@
 
 ;; font
 (custom-set-faces
- '(default ((t (:family "monospace" :height 120)))))
+ '(default ((t (:family "Fira Code" :height 100)))))
